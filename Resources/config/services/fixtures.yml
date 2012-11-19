@@ -1,0 +1,24 @@
+services:
+    havvg_jasmine.jasmine_controller:
+        class: Havvg\Bundle\JasmineBundle\Controller\JasmineController
+        arguments:
+            - '@templating'
+            - '::jasmine.html.twig'
+            - "%havvg_jasmine.fixtures.directory%"
+        calls:
+            - [ setCacheDirectory, [ "%kernel.root_dir%/../web/%havvg_jasmine.fixtures.web_path%" ] ]
+
+    havvg_jasmine.routing.loader:
+        class: Havvg\Bundle\JasmineBundle\Routing\JasmineLoader
+        calls:
+            - [ setDirectory, [ "%havvg_jasmine.fixtures.directory%" ] ]
+            - [ setWebPath, [ "%havvg_jasmine.fixtures.web_path%" ] ]
+        tags:
+            - { name: 'routing.loader' }
+
+    havvg_jasmine.routing.cache_clearer:
+        class: Havvg\Bundle\JasmineBundle\Routing\CacheClearer
+        calls:
+            - [ setDirectory, [ "%kernel.root_dir%/../web/%havvg_jasmine.fixtures.web_path%" ] ]
+        tags:
+            - { name: 'kernel.cache_clearer' }
