@@ -1,0 +1,28 @@
+{
+    "name": "havvg/jasmine-bundle",
+    "description": "This bundles provides utilities to work with Jasmine.",
+    "keywords": [ "jasmine", "javascript", "testing" ],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Toni Uebernickel",
+            "email": "tuebernickel@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "symfony/framework-bundle": "2.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Havvg\\Bundle\\JasmineBundle": ""
+        }
+    },
+    "target-dir": "Havvg/Bundle/JasmineBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
