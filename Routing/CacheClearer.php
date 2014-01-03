@@ -10,25 +10,18 @@ class CacheClearer implements CacheClearerInterface
 {
     protected $directory;
 
+    public function __construct($directory)
+    {
+        $this->directory = $directory;
+    }
+
     public function clear($cacheDir)
     {
         // $cacheDir refers to the application, it's not in use by the routing
 
-        if ($directory = realpath($this->getDirectory())) {
+        if ($directory = realpath($this->directory)) {
             $fs = new Filesystem();
             $fs->remove(Finder::create()->in($directory));
         }
-    }
-
-    public function setDirectory($directory)
-    {
-        $this->directory = $directory;
-
-        return $this;
-    }
-
-    public function getDirectory()
-    {
-        return $this->directory;
     }
 }

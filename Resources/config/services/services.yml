@@ -1,0 +1,6 @@
+services:
+    havvg_jasmine.jasmine_controller:
+        class: Havvg\Bundle\JasmineBundle\Controller\JasmineController
+        arguments:
+            - '@templating'
+            - '%havvg_jasmine.template%'

@@ -1,7 +1,3 @@
 _jasmine:
     pattern: '/_jasmine'
     defaults: { _controller: 'havvg_jasmine.jasmine_controller:testAction' }
-
-_jasmine_fixtures:
-    resource: '.'
-    type:     'jasmine'

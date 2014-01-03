@@ -41,7 +41,7 @@ class JasmineLoader extends Loader
             $routes->add('_jasmine_fixtures_'.sha1($fileName), new Route(
                 $route,
                 array(
-                    '_controller' => 'havvg_jasmine.jasmine_controller:fixtureAction',
+                    '_controller' => 'havvg_jasmine.fixtures_controller:fixtureAction',
                     'file' => $fileName,
                 ),
                 array(

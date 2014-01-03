@@ -1,0 +1,3 @@
+_jasmine_fixtures:
+    resource: '.'
+    type:     'jasmine'
