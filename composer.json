@@ -12,9 +12,9 @@
     ],
     "require": {
         "php": "~5.3",
-        "symfony/assetic-bundle": "~2.3",
-        "symfony/finder": "~2.3",
-        "symfony/framework-bundle": "~2.3"
+        "symfony/assetic-bundle": "~2.2",
+        "symfony/finder": "~2.2",
+        "symfony/framework-bundle": "~2.2"
     },
     "autoload": {
         "psr-0": {
