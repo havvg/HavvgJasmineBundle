@@ -17,6 +17,7 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
         $expected = array(
             'asset_manager' => 'assetic.asset_manager',
             'template' => '::jasmine.html.twig',
+            'spec_target_path' => '',
         );
 
         $this->assertEquals($expected, $config);
@@ -46,6 +47,7 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
         $expected = array(
             'asset_manager' => 'assetic.asset_manager',
             'template' => '::jasmine.html.twig',
+            'spec_target_path' => '',
             'fixtures' => array(
                 'directory' => '%kernel.root_dir%/Resources/jasmine/fixtures',
                 'web_path' => '/spec/javascripts/fixtures',

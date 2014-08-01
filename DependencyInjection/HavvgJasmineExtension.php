@@ -27,6 +27,7 @@ class HavvgJasmineExtension extends Extension
 
         $container->setAlias('havvg_jasmine.asset_manager', $config['asset_manager']);
         $container->setParameter('havvg_jasmine.template', $config['template']);
+        $container->setParameter('havvg_jasmine.spec_target_path', $config['spec_target_path']);
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config/services'));
         $loader->load('services.yml');

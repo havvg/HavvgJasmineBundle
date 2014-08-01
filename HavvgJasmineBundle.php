@@ -33,7 +33,11 @@ class HavvgJasmineBundle extends Bundle
             return;
         }
 
+        $targetPath = $this->container->getParameter('havvg_jasmine.spec_target_path');
+
         $asset = new AssetCollection();
+        $asset->setTargetPath($targetPath);
+
         foreach ($files as $eachFile) {
             $asset->add(new FileAsset($eachFile));
         }
