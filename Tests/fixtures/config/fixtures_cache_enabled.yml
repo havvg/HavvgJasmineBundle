@@ -1,0 +1,7 @@
+imports:
+    - { resource: 'empty.yml' }
+
+havvg_jasmine:
+    fixtures:
+        directory: '%kernel.root_dir%/fixtures/jasmine'
+        use_cache: true

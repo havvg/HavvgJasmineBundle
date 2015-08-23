@@ -20,7 +20,7 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
             'spec_target_path' => '',
         );
 
-        $this->assertEquals($expected, $config);
+        static::assertEquals($expected, $config);
     }
 
     public function testFixturesRequiresDirectory()
@@ -55,7 +55,7 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
             ),
         );
 
-        $this->assertEquals($expected, $config);
+        static::assertEquals($expected, $config);
     }
 
     public static function process(Configuration $configuration, array $configs)

@@ -37,12 +37,12 @@ class HavvgJasmineExtension extends Extension
             $container->setParameter('havvg_jasmine.fixtures.web_path', $config['fixtures']['web_path']);
             $container->setParameter('havvg_jasmine.fixtures.use_cache', $config['fixtures']['use_cache']);
 
+            $loader->load('fixtures.yml');
+
             if ($config['fixtures']['use_cache']) {
                 $controller = $container->getDefinition('havvg_jasmine.fixtures_controller');
                 $controller->addMethodCall('setCacheDirectory', array($config['fixtures']['web_path']));
             }
-
-            $loader->load('fixtures.yml');
         }
     }
 }

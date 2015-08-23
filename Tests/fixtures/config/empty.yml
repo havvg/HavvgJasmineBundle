@@ -1,0 +1,14 @@
+framework:
+    secret: 'm6FdFp8HOXUSu73M/EH61fVnMjJNotAKA4ZCuqRG6I78JwwcowkxwJ0SlOMpH5tT'
+    test: ~
+
+    router:
+        resource: '%kernel.root_dir%/fixtures/config/routing.yml'
+
+    templating:
+        engines:
+            - 'php'
+
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
